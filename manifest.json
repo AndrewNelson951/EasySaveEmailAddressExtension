@@ -1,16 +1,16 @@
 {
-    "manifest_version": 2,
-    "name": "Simple Email Extractor",
-    "version": "1.0",
-    "description": "Extracts email addresses from web pages",
-    "permissions": ["activeTab"],
-    "browser_action": {
-      "default_popup": "popup.html"
-    },
-    "content_scripts": [
-      {
-        "matches": ["<all_urls>"],
-        "js": ["content.js"]
-      }
-    ]
-  }
+  "manifest_version": 2,
+  "name": "Simple Email Extractor",
+  "version": "1.0",
+  "description": "Extracts email addresses from web pages",
+  "permissions": ["activeTab"],
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}

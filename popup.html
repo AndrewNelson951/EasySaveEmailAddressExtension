@@ -35,6 +35,12 @@
         .title svg {
             margin-right: 8px;
         }
+        .email-count {
+            font-size: 14px;
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 4px 8px;
+            border-radius: 12px;
+        }
         .toggle-btn {
             background: none;
             border: none;
@@ -91,6 +97,7 @@
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
                 Email Extractor
             </div>
+            <div class="email-count" id="emailCount">0 emails</div>
             <button id="toggleBtn" class="toggle-btn">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
             </button>
@@ -112,7 +119,6 @@
                 </button>
             </div>
         </div>
-        <div id="summary" class="summary"></div>
     </div>
     <script src="popup.js"></script>
 </body>
