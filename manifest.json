@@ -1,10 +1,14 @@
 {
-  "manifest_version": 2,
-  "name": "Simple Email Extractor",
-  "version": "1.0",
-  "description": "Extracts email addresses from web pages",
+  "manifest_version": 3,
+  "name": "Easy Email Extractor",
+  "version": "1.2",
+  "description": "Extracts email addresses from the current web page, and optionally saves it to a file. All data stays on your computer.",
   "permissions": ["activeTab"],
-  "browser_action": {
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
+  "action": {
     "default_popup": "popup.html"
   },
   "content_scripts": [

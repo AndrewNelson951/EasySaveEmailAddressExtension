@@ -6,8 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const content = document.getElementById('content');
     const emailList = document.getElementById('emailList');
     const copyBtn = document.getElementById('copyBtn');
-    const exportBtn = document.getElementById('exportBtn');
-    const clearBtn = document.getElementById('clearBtn');
+    const saveBtn = document.getElementById('saveBtn');
     const emailCount = document.getElementById('emailCount');
 
     function updateUI() {
@@ -34,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    exportBtn.addEventListener('click', function() {
+    saveBtn.addEventListener('click', function() {
         const currentDate = new Date().toISOString().split('T')[0]; // Get current date in YYYY-MM-DD format
         let csvContent = "Date,URL,Email\n"; // CSV header
         emails.forEach(email => {
@@ -47,11 +46,6 @@ document.addEventListener('DOMContentLoaded', function() {
         a.download = 'extracted_emails.csv';
         a.click();
         URL.revokeObjectURL(url);
-    });
-
-    clearBtn.addEventListener('click', function() {
-        emails = [];
-        updateUI();
     });
 
     // Initial email extraction
